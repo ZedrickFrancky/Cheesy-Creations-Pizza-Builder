@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHEF VALENTINA KITCHEN</title>
+    <link rel="shortcut icon" type="x-icon" href="ccpb-logo.png">
+    <link rel="stylesheet" href="normal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Oxygen&display=swap" rel="stylesheet">
+    <script src="normal.js" defer></script>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+  <div id="intro-popup" class="popup">
+    <img src="chef-valentina.svg" id="chef-axl-img">
+    <p>Welcome to Chef Valentina Kitchen! Get ready to arrange the items in the correct order before time runs out.
+    </p>
+    <p style="font-weight: bold;">The Arrangement:</p>
+    <img src="arrange.png" id="chef-axl-img" style="width: 435px; height: 229px; border: 10px solid #a92824; margin: auto; margin-bottom: 10px;
+     border-radius:10px;">
+      <span id="intro-timer" style="font-weight: bold; font-size: 30px; font-family: Oxygen; margin: 5px;">Time Left: 15</span> <!-- New timer display -->
+    <button id="startGameButton" onclick="startGame()">Start Game</button>
+</div>
+    <div id="game-container">
+      <div id="timer-container">
+        <p id="timer">Time Left: 0:30</p>
+      </div>
+      <audio id="clickSound3">
+        <source src="clicksound3.mp3" type="audio/mpeg"> 
+      </audio>
+      <audio id="clickSound">
+        <source src="clicksound.mp3" type="audio/mpeg"> 
+      </audio>
+      <iframe width="1" height="1" wmode="transparent" src="bg-sound.mp3" frameborder="0" allowfullscreen></iframe>
+    <div id="draggable-container">
+      <!-- Draggable items -->
+      <div class="draggable" draggable="true" id="item1"></div>
+      <div class="draggable" draggable="true" id="item2"></div>
+      <div class="draggable" draggable="true" id="item3"></div>
+      <div class="draggable" draggable="true" id="item4"></div> 
+      <div class="draggable" draggable="true" id="item5"></div>
+      <div class="draggable" draggable="true" id="item6"></div>
+      <div class="draggable" draggable="true" id="item7"></div>
+      <div class="draggable" draggable="true" id="item8"></div>
+      <div class="draggable" draggable="true" id="item9"></div>
+      <div class="draggable" draggable="true" id="item10"></div>
+      
+    </div>
+    <div id="droppable-container">
+      <!-- Droppable areas -->
+      <div class="droppable" id="drop1"></div>
+      <div class="droppable" id="drop2"></div>
+      <div class="droppable" id="drop3"></div>
+      <div class="droppable" id="drop4"></div>
+      <div class="droppable" id="drop5"></div>
+      <div class="droppable" id="drop6"></div>
+      <div class="droppable" id="drop7"></div>
+      <div class="droppable" id="drop8"></div>
+      <div class="droppable" id="drop9"></div>
+      <div class="droppable" id="drop10"></div>
+    </div>
+    <button id="finishButton" onclick="finishGame()">Finish</button>
+    <div id="endgame-popup" class="popup">
+      <p>Game Over! You ran out of time.</p>
+      <button id="exitButton" onclick="exitGame()"href = 'ccpb-start.html'>Exit</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,322 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+        background-image: url(bg.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+    
+    
+}
+
+#game-container {
+    text-align: center;
+}
+
+#draggable-container,
+#droppable-container {
+    background: rgba( 255, 255, 255, 0.3 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8.5px );
+-webkit-backdrop-filter: blur( 8.5px );
+border-radius: 40px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-gap: 10px; /* Space between elements */
+    justify-content: center;
+    margin: 50px;
+
+}
+
+.draggable {
+    width: 120px;
+    height: 120px;
+    color: #fff;
+    font-size: 20px;
+    cursor: grab;
+}
+#draggable-container{
+    width: 900px;
+    height: 400px;
+
+}
+#item1 {
+    width: 80%; 
+    height: 100%;
+    background-image: url('onion.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+#item2 {
+    width: 80%; 
+    height: 100%;
+    background-image: url('cheese.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+
+#item3 {
+    width: 80%; 
+    height: 100%;
+    background-image: url('dough.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+#item4 {
+    width: 80%; 
+    height: 100%;
+    background-image: url('pepperoni.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+#item5 {
+    width: 80%; 
+    height: 100%;
+    background-image: url('spinach.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+#item6 {
+    width: 80%; 
+    height: 100%;
+    background-image: url('pickels.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+#item7 {
+    width: 80%; 
+    height: 100%;
+    background-image: url('pizza-sauce.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+#item8 {
+    width: 80%; 
+    height: 100%;
+    background-image: url('chilli.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+#item9 {
+    width: 80%; 
+    height: 100%;
+    background-image: url('rolling-pin.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+#item10 {
+    width: 80%; 
+    height: 100%;
+    background-image: url('beef.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+.droppable {
+    width: 120px;  
+    height: 120px; 
+    border: 10px solid #4d4f50;
+    background-color: #9c9d9e;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+
+
+
+#endgame-popup, #intro-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+#endgame-popup {
+    background-color: #fff;
+}
+
+.overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+#intro-popup {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFCDF;
+    color: #a92824;
+    border: 10px solid #a92824;
+    border-radius: 40px;
+    text-align: center;
+    z-index: 999; 
+}
+
+#chef-axl-img {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+}
+
+#intro-popup p,
+#endgame-popup p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+#finishButton{
+    width: 250px;
+    border: 10px solid #622A1D;
+    font-size: 50px;
+    text-align: center;
+    font-family: Oswald;
+    background-color:#FFFCDF ;
+    color: #622A1D;
+    border-radius: 40px;
+    padding:10px;
+    transition: transform 0.3s ease-in-out;
+}
+#finishButton:hover{
+    transform: scale(1.1);
+    background-color: #A62825;
+    color:#FFFCDF ;
+    border: 10px solid #FFFCDF;
+}
+#startGameButton{
+    margin: auto;
+    margin-top: 10px;
+    width: 200px;
+    border: 10px solid #622A1D;
+    font-size: 30px;
+    text-align: center;
+    font-family: Oswald;
+    background-color:#FFFCDF ;
+    color: #622A1D;
+    border-radius: 40px;
+    padding:10px;
+    transition: transform 0.3s ease-in-out;
+}
+#startGameButton:hover{
+    transform: scale(1.1);
+    background-color: #A62825;
+    color:#FFFCDF ;
+    border: 10px solid #FFFCDF;
+}
+
+#exitButtonPopup{
+    width: 200px;
+    border: 10px solid #FFFCDF;
+    font-size: 20px;
+    text-align: center;
+    font-family: Oswald;
+    background-color: #A62825;
+    color:#FFFCDF ;
+    border-radius: 40px;
+    padding:5px;
+    transition: transform 0.3s ease-in-out;
+}
+#exitButtonPopup:hover{
+    transform: scale(1.1);
+    background-color:#FFFCDF ;  
+    color: #622A1D; 
+    border: 10px solid #622A1D;  
+}
+#endgame-popup{
+    background-color:#FFFCDF ;  
+    color: #622A1D; 
+    border: 10px solid #622A1D; 
+    border-radius: 30px; 
+}
+p{
+    font-family: Oxygen;
+}
+#timer {
+    margin: auto;
+    width: 400px;
+    border: 5px solid #FFFCDF;
+    font-size: 40px;
+    text-align: center;
+    font-family: Oxygen;
+    background-color: #a92824;
+    color: #FFFCDF;
+    border-radius: 40px;
+    animation: floaters 3s ease-in-out infinite;
+    padding: 10px;
+}
+@keyframes floaters {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

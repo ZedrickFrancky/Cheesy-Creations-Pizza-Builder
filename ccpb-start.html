@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="ccpb-logo.png">
+    <title>Chessy Creation: Pizza Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">o    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Oxygen&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="music-container">
+        <audio id="bgMusic" loop>
+            <source src="start-audio.mp3" type="audio/mp3">
+          </audio>
+          
+        <i class="play-pause-button fas fa-play fa-2xl fa-beat" style="color: #a92824;" id="playButton"></i>
+        <p id="music">MUSIC</p>
+        
+        <div id="night-day-toggle">
+            <i class="fas fa-moon night-icon fa-2xl fa-beat"></i>
+            <i class="fas fa-sun day-icon fa-2xl" style="display: none;"></i>
+            <p id="music">NIGHT</p>
+        </div>
+        
+        </div>
+   
+        <audio id="clickSound">
+            <source src="clicksound.mp3" type="audio/mpeg"> 
+          </audio>
+          <audio id="clickSound2">
+            <source src="clicksound2.mp3" type="audio/mpeg"> 
+          </audio>
+      
+          <div class="overlay" id="overlay"></div>
+
+          <div class="popup" id="popup">
+
+            <div class="popup-content">
+         
+              <div id="popup-menu">
+                <div id="chef-madelyn">
+                <img src="chef-madelyn.svg" alt="">
+                <p id="name-chef">CHEF MADELYN</p>
+                </div>
+                <div id="introduction">
+                    <p>
+                        Buongiorno! Welcome to our pizzeria,<br>
+                        <br>
+                        I'm Chef Madelyn, and I'm excited to have you join our pizzeria team. Here, we're passionate about crafting exceptional pizzas that tell a story with every slice.,<br>
+                        <br>
+                        In our kitchen, creativity is celebrated, and teamwork is key. Your fresh perspective will add a unique flavor to our recipes, and I'm confident you'll quickly become an essential part of our pizza-making family. <br>
+                        <br>
+                        Feel free to learn, contribute, and most importantly, enjoy the journey. Let's create delicious pizzas together and share the joy of great food!<br>
+                        <br>
+                        Welcome aboard!
+                        <br>
+                        P.S Turn on the Music for better Experience!
+                    </p>
+                </div>
+                
+              </div>
+              </div>
+          
+              <div class="button-container">
+                <button onclick="closePopup()" id="continue">CONTINUE</button>
+            </div>
+        </div>
+      </div>
+     
+     
+    
+    <div id="start-container">
+        <div id="select">
+            <p>SELECT YOUR EXECUTIVE CHEF!<p>
+        </div>    
+     
+        <div id="start-menu">
+            <img src="ccpb-logo.png" id="logo-start" class="logo-start">
+            <button id="start-btn" class="startbutton">START</button>
+        </div>
+  
+     <div id="start-level">
+   
+        <div id="chef-axl-name" data-href="ccpb-game-easy.html">
+            <img src="chef-axl.svg" id="chef-axl-img">
+            <h3>CHEF AXL</h3>
+            <p>Chef Axl is a young pizza maestro who has mastered the art of crafting pizzas.</p>
+            <h3>EASY</h3>
+        </div>
+        
+        <div id="chef-valentina-name" data-href="ccpb-game-normal.html">
+            <img src="chef-valentina.svg" id="chef-valentina-img">
+            <h3>CHEF VALENTINA</h3>
+            <p>Chef Valentina is an icon in the world of pizza-making, revered for her innovation.</p>
+            <h3>NORMAL</h3>
+        </div>        
+            
+            <div id="chef-giorno-name" data-href="ccpb-game-hard.html">
+                <img src="chef-giorno.svg" id="chef-giorno-img">
+                <h3>CHEF GIORNO</h3>
+                <p>The Godlike Pizza Virtuoso: transforming dough into legendary masterpieces.</p>
+                <h3>HARD</h3>
+            </div>
+            
+     
+        </div>
+        <button id="cancel-btn" class="cancelbutton">CANCEL</button>
+          
+</div>
+</body>
+    
+    <script src="ccpb-script-start.js"></script>
+    <script src="https://kit.fontawesome.com/3f9d0e4096.js" crossorigin="anonymous"></script>
+</body>
+</html>
